@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LoginFlow/LoginFlow.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CoordinatorKit/CoordinatorKit.xcodeproj">
    </FileRef>
    <FileRef

@@ -10,6 +10,8 @@
 		3C4162E4232B7D0900C23BA9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4162E3232B7D0900C23BA9 /* AppCoordinator.swift */; };
 		3C4163A3232B826D00C23BA9 /* CoordinatorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4163A2232B826D00C23BA9 /* CoordinatorKit.framework */; };
 		3C4163A4232B826D00C23BA9 /* CoordinatorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4163A2232B826D00C23BA9 /* CoordinatorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C4163BB232B82BC00C23BA9 /* LoginFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4163BA232B82BC00C23BA9 /* LoginFlow.framework */; };
+		3C4163BC232B82BC00C23BA9 /* LoginFlow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4163BA232B82BC00C23BA9 /* LoginFlow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3CB9715B232B457E006D44AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9715A232B457E006D44AD /* AppDelegate.swift */; };
 		3CB9715D232B457E006D44AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9715C232B457E006D44AD /* ViewController.swift */; };
 		3CB97160232B457E006D44AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB9715E232B457E006D44AD /* Main.storyboard */; };
@@ -47,6 +49,7 @@
 			files = (
 				3C4163A4232B826D00C23BA9 /* CoordinatorKit.framework in Embed Frameworks */,
 				3CB971B0232B4A9A006D44AD /* Core.framework in Embed Frameworks */,
+				3C4163BC232B82BC00C23BA9 /* LoginFlow.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +59,7 @@
 /* Begin PBXFileReference section */
 		3C4162E3232B7D0900C23BA9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3C4163A2232B826D00C23BA9 /* CoordinatorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoordinatorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4163BA232B82BC00C23BA9 /* LoginFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoginFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB97157232B457E006D44AD /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB9715A232B457E006D44AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB9715C232B457E006D44AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			files = (
 				3C4163A3232B826D00C23BA9 /* CoordinatorKit.framework in Frameworks */,
 				3CB971AF232B4A9A006D44AD /* Core.framework in Frameworks */,
+				3C4163BB232B82BC00C23BA9 /* LoginFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +107,7 @@
 		3CB9714E232B457E006D44AD = {
 			isa = PBXGroup;
 			children = (
+				3C4163BA232B82BC00C23BA9 /* LoginFlow.framework */,
 				3C4163A2232B826D00C23BA9 /* CoordinatorKit.framework */,
 				3CB971AE232B4A9A006D44AD /* Core.framework */,
 				3CB97159232B457E006D44AD /* Main */,
