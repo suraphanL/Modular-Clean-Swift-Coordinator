@@ -33,7 +33,8 @@ public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoor
   lazy var loginViewController: LoginViewController = {
     let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))
     let controller = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-    controller.router.coordinator = self
+//    controller.router.coordinator = self
+    controller.coordinator = self
 //    controller.delegate = self
     return controller
   }()
@@ -46,7 +47,8 @@ public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoor
   public func showSignUp() {
     let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))
     let controller = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-    controller.router.coordinator = self
+//    controller.router.coordinator = self
+    controller.coordinator = self
     router.push(controller, animated: true, completion: nil)
   }
   
@@ -58,6 +60,34 @@ public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoor
 
 }
 
+
+
+extension LoginFlowCoordinatorImplementation: LoginModuleOutput {
+  func proceedToSignUpForm(loginModule: LoginViewController) {
+    showSignUp()
+  }
+  
+  func proceedToOtp(loginModule: LoginViewController) {
+    showOtp()
+  }
+  
+  func closeLoginFlow(loginModule: LoginViewController) {
+    onCancel?()
+  }
+}
+
+extension LoginFlowCoordinatorImplementation: SignUpModuleOutput {
+  func proceedToOtp(module: SignUpViewController) {
+    showOtp()
+  }
+}
+
+
+
+
+
+
+// Via Router
 extension LoginFlowCoordinatorImplementation: LoginRouterOutput {
   func proceedToSignUpForm(router: LoginRouter) {
     showSignUp()

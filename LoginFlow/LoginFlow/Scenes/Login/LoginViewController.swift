@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol LoginModuleOutput: class {
+  func proceedToSignUpForm(loginModule: LoginViewController)
+  func proceedToOtp(loginModule: LoginViewController)
+  func closeLoginFlow(loginModule: LoginViewController)
+}
+
 protocol LoginViewControllerInterface: class {
   func displaySomething(viewModel: Login.Something.ViewModel)
 }
@@ -16,6 +22,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
   var interactor: LoginInteractorInterface!
   var router: LoginRouter!
 
+  weak var coordinator: LoginModuleOutput?
   // MARK: - Object lifecycle
 
   override func awakeFromNib() {
@@ -50,15 +57,18 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
   // MARK: - Event handling
 
   @IBAction func signUpClick(_ sender: UIButton) {
-    router.navigateToSignUpForm()
+//    router.navigateToSignUpForm()
+    coordinator?.proceedToSignUpForm(loginModule: self)
   }
   
   @IBAction func closeClick(_ sender: UIButton) {
-    router.navigateToHomePage()
+//    router.navigateToHomePage()
+    coordinator?.closeLoginFlow(loginModule: self)
   }
   
   @IBAction func otpClick(_ sender: UIButton) {
-    router.navigateToOtp()
+//    router.navigateToOtp()
+    coordinator?.proceedToOtp(loginModule: self)
   }
   
   func doSomethingOnLoad() {

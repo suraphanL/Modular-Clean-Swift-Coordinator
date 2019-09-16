@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SignUpModuleOutput: class {
+  func proceedToOtp(module: SignUpViewController)
+}
+
 protocol SignUpViewControllerInterface: class {
   func displaySomething(viewModel: SignUp.Something.ViewModel)
 }
@@ -15,7 +19,8 @@ protocol SignUpViewControllerInterface: class {
 class SignUpViewController: UIViewController, SignUpViewControllerInterface {
   var interactor: SignUpInteractorInterface!
   var router: SignUpRouter!
-
+  weak var coordinator: SignUpModuleOutput?
+  
   // MARK: - Object lifecycle
 
   override func awakeFromNib() {
@@ -50,7 +55,8 @@ class SignUpViewController: UIViewController, SignUpViewControllerInterface {
   // MARK: - Event handling
 
   @IBAction func otpClick(_ sender: UIButton) {
-    router.navigateToSomewhere()
+//    router.navigateToSomewhere()
+    coordinator?.proceedToOtp(module: self)
   }
   
   func doSomethingOnLoad() {
