@@ -46,21 +46,37 @@ public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoor
   public func showSignUp() {
     let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))
     let controller = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+    controller.router.coordinator = self
     router.push(controller, animated: true, completion: nil)
   }
+  
+  public func showOtp() {
+    let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))
+    let controller = storyBoard.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+    router.push(controller, animated: true, completion: nil)
+  }
+
 }
 
 extension LoginFlowCoordinatorImplementation: LoginRouterOutput {
-  func proceedToSignUpForm() {
+  func proceedToSignUpForm(router: LoginRouter) {
     showSignUp()
   }
   
-  func closeLoginFlow() {
+  func proceedToOtp(router: LoginRouter) {
+    showOtp()
+  }
+  
+  func closeLoginFlow(router: LoginRouter) {
     onCancel?()
   }
 }
 
-
+extension LoginFlowCoordinatorImplementation: SignUpRouterOutput {
+  func proceedToOtp(router: SignUpRouter) {
+    showOtp()
+  }
+}
 
 /*
 import UIKitpublic

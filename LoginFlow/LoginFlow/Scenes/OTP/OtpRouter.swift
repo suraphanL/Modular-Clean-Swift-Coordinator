@@ -1,33 +1,23 @@
 //
-//  LoginRouter.swift
+//  OtpRouter.swift
 //  LoginFlow
 //
-//  Created by Suraphan Laokondee on 13/9/19.
+//  Created by Suraphan Laokondee on 16/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
 //
 
 import UIKit
 
-protocol LoginRouterInput {
-  func navigateToSignUpForm()
-  func navigateToHomePage()
-  func navigateToOtp()
-}
-//TODO: Should we remove router?
-protocol LoginRouterOutput: class {
-  func proceedToSignUpForm(router: LoginRouter)
-  func proceedToOtp(router: LoginRouter)
-  func closeLoginFlow(router: LoginRouter)
+protocol OtpRouterInput {
+  func navigateToSomewhere()
 }
 
-class LoginRouter: LoginRouterInput {
-  weak var viewController: LoginViewController!
-  weak var coordinator: LoginRouterOutput?
-  
+class OtpRouter: OtpRouterInput {
+  weak var viewController: OtpViewController!
+
   // MARK: - Navigation
 
-  func navigateToSignUpForm() {
-    coordinator?.proceedToSignUpForm(router: self)
+  func navigateToSomewhere() {
     // NOTE: Teach the router how to navigate to another scene. Some examples follow:
 
     // 1. Trigger a storyboard segue
@@ -45,13 +35,6 @@ class LoginRouter: LoginRouterInput {
     // viewController.navigationController?.pushViewController(someWhereViewController, animated: true)
   }
 
-  func navigateToHomePage() {
-    coordinator?.closeLoginFlow(router: self)
-  }
-  
-  func navigateToOtp() {
-    coordinator?.proceedToOtp(router: self)
-  }
   // MARK: - Communication
 
   func passDataToNextScene(segue: UIStoryboardSegue) {

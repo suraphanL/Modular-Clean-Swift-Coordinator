@@ -1,20 +1,20 @@
 //
-//  SignUpViewController.swift
+//  OtpViewController.swift
 //  LoginFlow
 //
-//  Created by Suraphan Laokondee on 13/9/19.
+//  Created by Suraphan Laokondee on 16/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
 //
 
 import UIKit
 
-protocol SignUpViewControllerInterface: class {
-  func displaySomething(viewModel: SignUp.Something.ViewModel)
+protocol OtpViewControllerInterface: class {
+  func displaySomething(viewModel: Otp.Something.ViewModel)
 }
 
-class SignUpViewController: UIViewController, SignUpViewControllerInterface {
-  var interactor: SignUpInteractorInterface!
-  var router: SignUpRouter!
+class OtpViewController: UIViewController, OtpViewControllerInterface {
+  var interactor: OtpInteractorInterface!
+  var router: OtpRouter!
 
   // MARK: - Object lifecycle
 
@@ -25,16 +25,16 @@ class SignUpViewController: UIViewController, SignUpViewControllerInterface {
 
   // MARK: - Configuration
 
-  private func configure(viewController: SignUpViewController) {
-    let router = SignUpRouter()
+  private func configure(viewController: OtpViewController) {
+    let router = OtpRouter()
     router.viewController = viewController
 
-    let presenter = SignUpPresenter()
+    let presenter = OtpPresenter()
     presenter.viewController = viewController
 
-    let interactor = SignUpInteractor()
+    let interactor = OtpInteractor()
     interactor.presenter = presenter
-//    interactor.worker = SignUpWorker(store: SignUpStore())
+    
 
     viewController.interactor = interactor
     viewController.router = router
@@ -49,20 +49,16 @@ class SignUpViewController: UIViewController, SignUpViewControllerInterface {
 
   // MARK: - Event handling
 
-  @IBAction func otpClick(_ sender: UIButton) {
-    router.navigateToSomewhere()
-  }
-  
   func doSomethingOnLoad() {
     // NOTE: Ask the Interactor to do some work
 
-    let request = SignUp.Something.Request()
+    let request = Otp.Something.Request()
     interactor.doSomething(request: request)
   }
 
   // MARK: - Display logic
 
-  func displaySomething(viewModel: SignUp.Something.ViewModel) {
+  func displaySomething(viewModel: Otp.Something.ViewModel) {
     // NOTE: Display the result from the Presenter
 
     // nameTextField.text = viewModel.name
@@ -74,7 +70,7 @@ class SignUpViewController: UIViewController, SignUpViewControllerInterface {
     router.passDataToNextScene(segue: segue)
   }
 
-  @IBAction func unwindToSignUpViewController(from segue: UIStoryboardSegue) {
+  @IBAction func unwindToOtpViewController(from segue: UIStoryboardSegue) {
     print("unwind...")
     router.passDataToNextScene(segue: segue)
   }

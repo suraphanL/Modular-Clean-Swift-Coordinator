@@ -57,6 +57,10 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
     router.navigateToHomePage()
   }
   
+  @IBAction func otpClick(_ sender: UIButton) {
+    router.navigateToOtp()
+  }
+  
   func doSomethingOnLoad() {
     // NOTE: Ask the Interactor to do some work
 

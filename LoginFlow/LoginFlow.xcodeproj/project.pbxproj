@@ -28,6 +28,11 @@
 		3C41644D232B895700C23BA9 /* LoginFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C41644C232B895700C23BA9 /* LoginFlow.storyboard */; };
 		3C416451232B8A8000C23BA9 /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C416450232B8A8000C23BA9 /* LoginFlowCoordinator.swift */; };
 		3C416453232B8ABE00C23BA9 /* CoordinatorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C416452232B8ABE00C23BA9 /* CoordinatorKit.framework */; };
+		3C4164A4232F6DE000C23BA9 /* OtpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41649C232F6DE000C23BA9 /* OtpPresenter.swift */; };
+		3C4164A6232F6DE000C23BA9 /* OtpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41649E232F6DE000C23BA9 /* OtpRouter.swift */; };
+		3C4164A7232F6DE000C23BA9 /* OtpModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41649F232F6DE000C23BA9 /* OtpModels.swift */; };
+		3C4164A8232F6DE000C23BA9 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4164A0232F6DE000C23BA9 /* OtpViewController.swift */; };
+		3C4164A9232F6DE000C23BA9 /* OtpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4164A1232F6DE000C23BA9 /* OtpInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		3C41644C232B895700C23BA9 /* LoginFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginFlow.storyboard; sourceTree = "<group>"; };
 		3C416450232B8A8000C23BA9 /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
 		3C416452232B8ABE00C23BA9 /* CoordinatorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoordinatorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C41649C232F6DE000C23BA9 /* OtpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPresenter.swift; sourceTree = "<group>"; };
+		3C41649E232F6DE000C23BA9 /* OtpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpRouter.swift; sourceTree = "<group>"; };
+		3C41649F232F6DE000C23BA9 /* OtpModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpModels.swift; sourceTree = "<group>"; };
+		3C4164A0232F6DE000C23BA9 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		3C4164A1232F6DE000C23BA9 /* OtpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,7 @@
 		3C416427232B87D000C23BA9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3C41649A232F6D9400C23BA9 /* OTP */,
 				3C416429232B87EB00C23BA9 /* SignUp */,
 				3C416428232B87DC00C23BA9 /* Login */,
 			);
@@ -191,6 +202,18 @@
 				3C416450232B8A8000C23BA9 /* LoginFlowCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3C41649A232F6D9400C23BA9 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				3C41649C232F6DE000C23BA9 /* OtpPresenter.swift */,
+				3C41649E232F6DE000C23BA9 /* OtpRouter.swift */,
+				3C41649F232F6DE000C23BA9 /* OtpModels.swift */,
+				3C4164A0232F6DE000C23BA9 /* OtpViewController.swift */,
+				3C4164A1232F6DE000C23BA9 /* OtpInteractor.swift */,
+			);
+			path = OTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,17 +331,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4164A9232F6DE000C23BA9 /* OtpInteractor.swift in Sources */,
 				3C416449232B88A900C23BA9 /* SignUpViewController.swift in Sources */,
+				3C4164A7232F6DE000C23BA9 /* OtpModels.swift in Sources */,
 				3C416447232B88A900C23BA9 /* SignUpRouter.swift in Sources */,
 				3C416439232B884600C23BA9 /* LoginViewController.swift in Sources */,
 				3C416451232B8A8000C23BA9 /* LoginFlowCoordinator.swift in Sources */,
 				3C416435232B884600C23BA9 /* LoginPresenter.swift in Sources */,
 				3C416448232B88A900C23BA9 /* SignUpModels.swift in Sources */,
 				3C41643A232B884600C23BA9 /* LoginInteractor.swift in Sources */,
+				3C4164A8232F6DE000C23BA9 /* OtpViewController.swift in Sources */,
+				3C4164A6232F6DE000C23BA9 /* OtpRouter.swift in Sources */,
 				3C416445232B88A900C23BA9 /* SignUpPresenter.swift in Sources */,
 				3C416438232B884600C23BA9 /* LoginModels.swift in Sources */,
 				3C41644A232B88A900C23BA9 /* SignUpInteractor.swift in Sources */,
 				3C416437232B884600C23BA9 /* LoginRouter.swift in Sources */,
+				3C4164A4232F6DE000C23BA9 /* OtpPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
