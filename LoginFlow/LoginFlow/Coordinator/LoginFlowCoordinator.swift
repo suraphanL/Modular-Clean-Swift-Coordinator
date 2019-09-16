@@ -9,6 +9,11 @@
 import Foundation
 import CoordinatorKit
 
+
+public protocol LoginFlowCoordinatorDelegate: class {
+  func coordinatorDidFinish()
+}
+
 public protocol LoginFlowCoordinator {
   func showSignUp()
 }
@@ -16,9 +21,14 @@ public protocol LoginFlowCoordinator {
 private final class BundleToken {}
 
 public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoordinator {
+  // Coordinator and Communicate back with 2 options
+  // Delegate
+  weak var delegate: LoginFlowCoordinatorDelegate?
   
+  // Callback
   public var onCancel: (() -> Void)?
   public var onAuthenticated: ((String) -> ())?
+  
   
   lazy var loginViewController: LoginViewController = {
     let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))

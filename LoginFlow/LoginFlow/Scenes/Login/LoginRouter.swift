@@ -12,7 +12,7 @@ protocol LoginRouterInput {
   func navigateToSignUpForm()
   func navigateToHomePage()
 }
-
+//TODO: Should we remove router?
 protocol LoginRouterOutput: class {
   func proceedToSignUpForm()
   func closeLoginFlow()
