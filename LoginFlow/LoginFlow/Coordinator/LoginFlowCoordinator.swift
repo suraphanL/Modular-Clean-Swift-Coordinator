@@ -18,7 +18,7 @@ public protocol LoginFlowCoordinator {
   func showSignUp()
 }
 
-private final class BundleToken {}
+final class BundleToken {}
 
 public class LoginFlowCoordinatorImplementation: Coordinator<Any>, LoginFlowCoordinator {
   // Coordinator and Communicate back with 2 options

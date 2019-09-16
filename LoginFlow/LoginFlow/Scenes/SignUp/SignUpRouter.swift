@@ -26,6 +26,12 @@ class SignUpRouter: SignUpRouterInput {
     coordinator?.proceedToOtp(router: self)
   }
 
+  // Without Coordinator
+  func showOtp() {
+    let storyBoard = UIStoryboard(name: "LoginFlow", bundle: Bundle(for: BundleToken.self))
+    let controller = storyBoard.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+    viewController.navigationController?.pushViewController(controller, animated: true)
+  }
   // MARK: - Communication
 
   func passDataToNextScene(segue: UIStoryboardSegue) {
@@ -37,9 +43,5 @@ class SignUpRouter: SignUpRouterInput {
   }
 
   func passDataToSomewhereScene(segue: UIStoryboardSegue) {
-    // NOTE: Teach the router how to pass data to the next scene
-
-    // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-    // someWhereViewController.interactor.model = viewController.interactor.model
   }
 }
