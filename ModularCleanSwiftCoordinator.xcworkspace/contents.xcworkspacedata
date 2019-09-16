@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SubFlow/SubFlow.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:HomePageFlow/HomePageFlow.xcodeproj">
    </FileRef>
    <FileRef

@@ -17,7 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="UId-yo-PnK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-L3-ubu">
+                                <rect key="frame" x="95" y="136" width="224" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Push Coordinator"/>
+                                <connections>
+                                    <action selector="goToDetailFlow:" destination="ert-lN-Hhe" eventType="touchUpInside" id="56f-R1-XXO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VvN-L3-ubu" firstAttribute="centerX" secondItem="UId-yo-PnK" secondAttribute="centerX" id="Rqo-Gt-lOw"/>
+                            <constraint firstItem="VvN-L3-ubu" firstAttribute="top" secondItem="d1F-7N-eYB" secondAttribute="top" constant="92" id="gvw-RN-JTg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d1F-7N-eYB"/>
                     </view>
                 </viewController>

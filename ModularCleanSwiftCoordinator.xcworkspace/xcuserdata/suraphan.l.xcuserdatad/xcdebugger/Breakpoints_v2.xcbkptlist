@@ -22,11 +22,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginFlow/LoginFlow/Coordinator/LoginFlowCoordinator.swift"
-            timestampString = "590295679.1904449"
+            timestampString = "590299041.970884"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -38,16 +38,173 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginFlow/LoginFlow/Coordinator/LoginFlowCoordinator.swift"
-            timestampString = "590295679.1907361"
+            timestampString = "590299041.9709409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "closeLoginFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePageFlow/HomePageFlow/Coordinator/HomeCoordinator.swift"
+            timestampString = "590299041.970989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "proceedToDetailPage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePageFlow/HomePageFlow/Coordinator/HomeCoordinator.swift"
+            timestampString = "590299041.97103"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "proceedToDetailPage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePageFlow/HomePageFlow/Scenes/Home/HomeRouter.swift"
+            timestampString = "590299041.971073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "navigateToDetailPage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+            timestampString = "590299041.971114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewController"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SubFlow.SubFlowCoordinatorImplementation.viewController.getter : SubFlow.DetailViewController"
+                  moduleName = "SubFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suraphan.l/Documents/GitHub/Modular-Clean-Swift-Coordinator/SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+                  timestampString = "590299042.277861"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "206">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SubFlow.DetailViewController in SubFlow.SubFlowCoordinatorImplementation.viewController.getter : SubFlow.DetailViewController"
+                  moduleName = "SubFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suraphan.l/Documents/GitHub/Modular-Clean-Swift-Coordinator/SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+                  timestampString = "590299042.279621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SubFlow.SubFlowCoordinatorImplementation.viewController.setter : SubFlow.DetailViewController"
+                  moduleName = "SubFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suraphan.l/Documents/GitHub/Modular-Clean-Swift-Coordinator/SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+                  timestampString = "590299042.2813931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SubFlow.SubFlowCoordinatorImplementation.viewController.modify : SubFlow.DetailViewController"
+                  moduleName = "SubFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suraphan.l/Documents/GitHub/Modular-Clean-Swift-Coordinator/SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+                  timestampString = "590299042.283119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SubFlow.SubFlowCoordinatorImplementation.viewController.modify : SubFlow.DetailViewController with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SubFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suraphan.l/Documents/GitHub/Modular-Clean-Swift-Coordinator/SubFlow/SubFlow/Coordinators/SubFlowCoordinator.swift"
+                  timestampString = "590299042.2848721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoordinatorKit/CoordinatorKit/Router.swift"
+            timestampString = "590299317.864504"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "runCompletion(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

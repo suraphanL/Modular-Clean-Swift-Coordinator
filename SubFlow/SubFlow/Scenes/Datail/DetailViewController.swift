@@ -1,20 +1,20 @@
 //
-//  HomeViewController.swift
-//  HomePageFlow
+//  DetailViewController.swift
+//  SubFlow
 //
-//  Created by Suraphan Laokondee on 13/9/19.
+//  Created by Suraphan Laokondee on 16/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
 //
 
 import UIKit
 
-protocol HomeViewControllerInterface: class {
-  func displaySomething(viewModel: Home.Something.ViewModel)
+protocol DetailViewControllerInterface: class {
+  func displaySomething(viewModel: Detail.Something.ViewModel)
 }
 
-class HomeViewController: UIViewController, HomeViewControllerInterface {
-  var interactor: HomeInteractorInterface!
-  var router: HomeRouter!
+class DetailViewController: UIViewController, DetailViewControllerInterface {
+  var interactor: DetailInteractorInterface!
+  var router: DetailRouter!
 
   // MARK: - Object lifecycle
 
@@ -25,16 +25,16 @@ class HomeViewController: UIViewController, HomeViewControllerInterface {
 
   // MARK: - Configuration
 
-  private func configure(viewController: HomeViewController) {
-    let router = HomeRouter()
+  private func configure(viewController: DetailViewController) {
+    let router = DetailRouter()
     router.viewController = viewController
 
-    let presenter = HomePresenter()
+    let presenter = DetailPresenter()
     presenter.viewController = viewController
 
-    let interactor = HomeInteractor()
+    let interactor = DetailInteractor()
     interactor.presenter = presenter
-//    interactor.worker = HomeWorker(store: HomeStore())
+//    interactor.worker = DetailWorker(store: DetailStore())
 
     viewController.interactor = interactor
     viewController.router = router
@@ -48,20 +48,17 @@ class HomeViewController: UIViewController, HomeViewControllerInterface {
   }
 
   // MARK: - Event handling
-  @IBAction func goToDetailFlow(_ sender: UIButton) {
-    router.navigateToDetailPage()
-  }
-  
+
   func doSomethingOnLoad() {
     // NOTE: Ask the Interactor to do some work
 
-    let request = Home.Something.Request()
+    let request = Detail.Something.Request()
     interactor.doSomething(request: request)
   }
 
   // MARK: - Display logic
 
-  func displaySomething(viewModel: Home.Something.ViewModel) {
+  func displaySomething(viewModel: Detail.Something.ViewModel) {
     // NOTE: Display the result from the Presenter
 
     // nameTextField.text = viewModel.name
@@ -73,7 +70,7 @@ class HomeViewController: UIViewController, HomeViewControllerInterface {
     router.passDataToNextScene(segue: segue)
   }
 
-  @IBAction func unwindToHomeViewController(from segue: UIStoryboardSegue) {
+  @IBAction func unwindToDetailViewController(from segue: UIStoryboardSegue) {
     print("unwind...")
     router.passDataToNextScene(segue: segue)
   }

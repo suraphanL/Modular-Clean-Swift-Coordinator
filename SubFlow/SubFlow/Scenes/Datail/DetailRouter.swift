@@ -1,29 +1,23 @@
 //
-//  HomeRouter.swift
-//  HomePageFlow
+//  DetailRouter.swift
+//  SubFlow
 //
-//  Created by Suraphan Laokondee on 13/9/19.
+//  Created by Suraphan Laokondee on 16/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
 //
 
 import UIKit
 
-protocol HomeRouterInput {
-  func navigateToDetailPage()
+protocol DetailRouterInput {
+  func navigateToSomewhere()
 }
 
-protocol HomeRouterOutput: class {
-  func proceedToDetailPage()
-}
+class DetailRouter: DetailRouterInput {
+  weak var viewController: DetailViewController!
 
-class HomeRouter: HomeRouterInput {
-  weak var viewController: HomeViewController!
-  weak var coordinator: HomeRouterOutput?
-  
   // MARK: - Navigation
 
-  func navigateToDetailPage() {
-    coordinator?.proceedToDetailPage()
+  func navigateToSomewhere() {
     // NOTE: Teach the router how to navigate to another scene. Some examples follow:
 
     // 1. Trigger a storyboard segue
