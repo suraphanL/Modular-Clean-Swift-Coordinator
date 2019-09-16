@@ -1,6 +1,6 @@
 //
-//  LoginRouter.swift
-//  LoginFlow
+//  HomeRouter.swift
+//  HomePageFlow
 //
 //  Created by Suraphan Laokondee on 13/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
@@ -8,24 +8,16 @@
 
 import UIKit
 
-protocol LoginRouterInput {
-  func navigateToSignUpForm()
-  func navigateToHomePage()
+protocol HomeRouterInput {
+  func navigateToSomewhere()
 }
 
-protocol LoginRouterOutput: class {
-  func proceedToSignUpForm()
-  func closeLoginFlow()
-}
+class HomeRouter: HomeRouterInput {
+  weak var viewController: HomeViewController!
 
-class LoginRouter: LoginRouterInput {
-  weak var viewController: LoginViewController!
-  weak var coordinator: LoginRouterOutput?
-  
   // MARK: - Navigation
 
-  func navigateToSignUpForm() {
-    coordinator?.proceedToSignUpForm()
+  func navigateToSomewhere() {
     // NOTE: Teach the router how to navigate to another scene. Some examples follow:
 
     // 1. Trigger a storyboard segue
@@ -43,9 +35,6 @@ class LoginRouter: LoginRouterInput {
     // viewController.navigationController?.pushViewController(someWhereViewController, animated: true)
   }
 
-  func navigateToHomePage() {
-    coordinator?.closeLoginFlow()
-  }
   // MARK: - Communication
 
   func passDataToNextScene(segue: UIStoryboardSegue) {

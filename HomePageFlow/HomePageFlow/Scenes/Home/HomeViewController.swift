@@ -1,6 +1,6 @@
 //
-//  LoginViewController.swift
-//  LoginFlow
+//  HomeViewController.swift
+//  HomePageFlow
 //
 //  Created by Suraphan Laokondee on 13/9/19.
 //  Copyright (c) 2019 SCB. All rights reserved.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol LoginViewControllerInterface: class {
-  func displaySomething(viewModel: Login.Something.ViewModel)
+protocol HomeViewControllerInterface: class {
+  func displaySomething(viewModel: Home.Something.ViewModel)
 }
 
-class LoginViewController: UIViewController, LoginViewControllerInterface {
-  var interactor: LoginInteractorInterface!
-  var router: LoginRouter!
+class HomeViewController: UIViewController, HomeViewControllerInterface {
+  var interactor: HomeInteractorInterface!
+  var router: HomeRouter!
 
   // MARK: - Object lifecycle
 
@@ -25,16 +25,16 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
 
   // MARK: - Configuration
 
-  private func configure(viewController: LoginViewController) {
-    let router = LoginRouter()
+  private func configure(viewController: HomeViewController) {
+    let router = HomeRouter()
     router.viewController = viewController
 
-    let presenter = LoginPresenter()
+    let presenter = HomePresenter()
     presenter.viewController = viewController
 
-    let interactor = LoginInteractor()
+    let interactor = HomeInteractor()
     interactor.presenter = presenter
-//    interactor.worker = LoginWorker(store: LoginStore())
+//    interactor.worker = HomeWorker(store: HomeStore())
 
     viewController.interactor = interactor
     viewController.router = router
@@ -49,24 +49,16 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
 
   // MARK: - Event handling
 
-  @IBAction func signUpClick(_ sender: UIButton) {
-    router.navigateToSignUpForm()
-  }
-  
-  @IBAction func closeClick(_ sender: UIButton) {
-    router.navigateToHomePage()
-  }
-  
   func doSomethingOnLoad() {
     // NOTE: Ask the Interactor to do some work
 
-    let request = Login.Something.Request()
+    let request = Home.Something.Request()
     interactor.doSomething(request: request)
   }
 
   // MARK: - Display logic
 
-  func displaySomething(viewModel: Login.Something.ViewModel) {
+  func displaySomething(viewModel: Home.Something.ViewModel) {
     // NOTE: Display the result from the Presenter
 
     // nameTextField.text = viewModel.name
@@ -78,7 +70,7 @@ class LoginViewController: UIViewController, LoginViewControllerInterface {
     router.passDataToNextScene(segue: segue)
   }
 
-  @IBAction func unwindToLoginViewController(from segue: UIStoryboardSegue) {
+  @IBAction func unwindToHomeViewController(from segue: UIStoryboardSegue) {
     print("unwind...")
     router.passDataToNextScene(segue: segue)
   }

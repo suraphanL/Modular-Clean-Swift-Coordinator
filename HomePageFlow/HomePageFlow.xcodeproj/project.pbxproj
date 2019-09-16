@@ -10,6 +10,13 @@
 		3C4163F8232B850600C23BA9 /* HomePageFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4163EE232B850600C23BA9 /* HomePageFlow.framework */; };
 		3C4163FD232B850600C23BA9 /* HomePageFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4163FC232B850600C23BA9 /* HomePageFlowTests.swift */; };
 		3C4163FF232B850600C23BA9 /* HomePageFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4163F1232B850600C23BA9 /* HomePageFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C416456232B963A00C23BA9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C416455232B963A00C23BA9 /* HomeCoordinator.swift */; };
+		3C416462232B96B800C23BA9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41645A232B96B800C23BA9 /* HomePresenter.swift */; };
+		3C416464232B96B800C23BA9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41645C232B96B800C23BA9 /* HomeRouter.swift */; };
+		3C416465232B96B800C23BA9 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41645D232B96B800C23BA9 /* HomeModels.swift */; };
+		3C416466232B96B800C23BA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41645E232B96B800C23BA9 /* HomeViewController.swift */; };
+		3C416467232B96B800C23BA9 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41645F232B96B800C23BA9 /* HomeInteractor.swift */; };
+		3C41646A232B973E00C23BA9 /* HomeFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C416469232B973E00C23BA9 /* HomeFlow.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		3C4163F7232B850600C23BA9 /* HomePageFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomePageFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4163FC232B850600C23BA9 /* HomePageFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageFlowTests.swift; sourceTree = "<group>"; };
 		3C4163FE232B850600C23BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C416455232B963A00C23BA9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		3C41645A232B96B800C23BA9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3C41645C232B96B800C23BA9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		3C41645D232B96B800C23BA9 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		3C41645E232B96B800C23BA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3C41645F232B96B800C23BA9 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		3C416469232B973E00C23BA9 /* HomeFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFlow.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,9 @@
 		3C4163F0232B850600C23BA9 /* HomePageFlow */ = {
 			isa = PBXGroup;
 			children = (
+				3C416454232B962500C23BA9 /* Coordinator */,
+				3C416469232B973E00C23BA9 /* HomeFlow.storyboard */,
+				3C416457232B969C00C23BA9 /* Scenes */,
 				3C4163F1232B850600C23BA9 /* HomePageFlow.h */,
 				3C4163F2232B850600C23BA9 /* Info.plist */,
 			);
@@ -84,6 +101,34 @@
 				3C4163FE232B850600C23BA9 /* Info.plist */,
 			);
 			path = HomePageFlowTests;
+			sourceTree = "<group>";
+		};
+		3C416454232B962500C23BA9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3C416455232B963A00C23BA9 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3C416457232B969C00C23BA9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3C416458232B96A500C23BA9 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3C416458232B96A500C23BA9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3C41645A232B96B800C23BA9 /* HomePresenter.swift */,
+				3C41645C232B96B800C23BA9 /* HomeRouter.swift */,
+				3C41645D232B96B800C23BA9 /* HomeModels.swift */,
+				3C41645E232B96B800C23BA9 /* HomeViewController.swift */,
+				3C41645F232B96B800C23BA9 /* HomeInteractor.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +193,7 @@
 				TargetAttributes = {
 					3C4163ED232B850600C23BA9 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					3C4163F6232B850600C23BA9 = {
 						CreatedOnToolsVersion = 10.3;
@@ -177,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C41646A232B973E00C23BA9 /* HomeFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C416462232B96B800C23BA9 /* HomePresenter.swift in Sources */,
+				3C416467232B96B800C23BA9 /* HomeInteractor.swift in Sources */,
+				3C416456232B963A00C23BA9 /* HomeCoordinator.swift in Sources */,
+				3C416465232B96B800C23BA9 /* HomeModels.swift in Sources */,
+				3C416466232B96B800C23BA9 /* HomeViewController.swift in Sources */,
+				3C416464232B96B800C23BA9 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +394,7 @@
 		3C416403232B850600C23BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rawd.HomePageFlow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +420,7 @@
 		3C416404232B850600C23BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +445,7 @@
 		3C416406232B850600C23BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HomePageFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +463,7 @@
 		3C416407232B850600C23BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HomePageFlowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

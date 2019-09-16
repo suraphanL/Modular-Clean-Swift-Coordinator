@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import CoordinatorKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  lazy var appNavigationController: UINavigationController = UINavigationController()
+  lazy var appRouter: RouterType = Router(navigationController: self.appNavigationController)
+  lazy var appCoordinator: AppCoordinator = AppCoordinator(router: self.appRouter)
+  
   var window: UIWindow?
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    // MARK: Window
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.rootViewController = appCoordinator.toPresentable()
+    window?.backgroundColor = .white
+    window?.makeKeyAndVisible()
+    
+    // or get notification from launch options and convert it to a deep link
+    appCoordinator.start()
     return true
   }
 

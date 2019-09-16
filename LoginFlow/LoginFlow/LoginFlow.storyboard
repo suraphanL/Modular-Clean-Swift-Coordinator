@@ -24,10 +24,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exG-UV-fFv">
+                                <rect key="frame" x="132" y="417" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeClick:" destination="A58-mS-Q9d" eventType="touchUpInside" id="YOD-bO-EN9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4v-yr-i6o">
+                                <rect key="frame" x="132" y="245" width="150" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Bq-bg-OYy"/>
+                                    <constraint firstAttribute="width" constant="150" id="LhA-NN-8jr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sign UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpClick:" destination="A58-mS-Q9d" eventType="touchUpInside" id="aus-I2-leh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="m4v-yr-i6o" firstAttribute="top" secondItem="MeR-My-ObR" secondAttribute="bottom" constant="65" id="DKE-BV-fI1"/>
+                            <constraint firstItem="m4v-yr-i6o" firstAttribute="centerX" secondItem="1af-BP-FQK" secondAttribute="centerX" id="Maw-rD-lIH"/>
                             <constraint firstItem="MeR-My-ObR" firstAttribute="top" secondItem="Czu-IS-TYu" secondAttribute="top" constant="76" id="O6j-H6-LXR"/>
+                            <constraint firstItem="exG-UV-fFv" firstAttribute="height" secondItem="m4v-yr-i6o" secondAttribute="height" id="QLY-dT-Afw"/>
+                            <constraint firstItem="exG-UV-fFv" firstAttribute="width" secondItem="m4v-yr-i6o" secondAttribute="width" id="d4P-CA-AEK"/>
+                            <constraint firstItem="exG-UV-fFv" firstAttribute="leading" secondItem="m4v-yr-i6o" secondAttribute="leading" id="dJo-VQ-Eej"/>
+                            <constraint firstItem="exG-UV-fFv" firstAttribute="trailing" secondItem="m4v-yr-i6o" secondAttribute="trailing" id="luk-O1-qdy"/>
+                            <constraint firstItem="exG-UV-fFv" firstAttribute="top" secondItem="m4v-yr-i6o" secondAttribute="bottom" constant="122" id="u9C-KQ-4NB"/>
                             <constraint firstItem="MeR-My-ObR" firstAttribute="centerX" secondItem="1af-BP-FQK" secondAttribute="centerX" id="yuE-85-TVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Czu-IS-TYu"/>
@@ -35,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7p-lm-KWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="-104"/>
+            <point key="canvasLocation" x="-556.52173913043487" y="-104.46428571428571"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="G0u-OU-Bsn">
