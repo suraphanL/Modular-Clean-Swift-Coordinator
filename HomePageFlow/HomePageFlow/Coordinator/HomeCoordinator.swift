@@ -10,12 +10,13 @@ import Foundation
 import CoordinatorKit
 import SubFlow
 
-public protocol HomeCordinator {
+public protocol HomeCoordinator {
   
 }
+
 private final class BundleToken {}
 
-public class HomeCordinatorImplementation: Coordinator<Any>, HomeCordinator {
+public class HomeCordinatorImplementation: Coordinator<Any>, HomeCoordinator {
 
   lazy var homeViewController: HomeViewController = {
     let storyBoard = UIStoryboard(name: "HomeFlow", bundle: Bundle(for: BundleToken.self))
